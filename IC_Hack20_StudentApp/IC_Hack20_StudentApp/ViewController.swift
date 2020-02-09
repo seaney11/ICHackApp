@@ -13,15 +13,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //MARK: Properties
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ClassIDNameLabel: UILabel!
-    
-//    let url = URL(string: "http://www.stackoverflow.com")!
-//
-//    let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-//        guard let data = data else { return }
-//        print(String(data: data, encoding: .utf8)!)
-//    }
-//
-//    task.resume()
+      
+    var ip: String = ""
+    var port: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +23,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         nameTextField.delegate = self
     }
     
-    //MARK: Actions
+    
+//    Editor placeholder in source file
     @IBAction func SeekURL(_ sender: Any) {
         print("HellO")
         let text: String = nameTextField.text!
@@ -47,8 +42,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func json_dealer(stringValue: String) {
-//        let stringValue = "{\"name\": \"test\",\"code\": \"abcd\",\"ip\": \"192.168.1.1\",\"port\": 2000}"
-        let stringValue = "{\"error\":\"invalid code\"}"
+        let stringValue = "{\"name\": \"test\",\"code\": \"abcd\",\"ip\": \"192.168.1.1\",\"port\": 2000}"
+//        let stringValue = "{\"error\":\"invalid code\"}"
         
 
         let data = stringValue.data(using: .utf8)!
@@ -57,6 +52,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             {
                 print("Good json", json)
                 if let name = json["name"] {
+                    ip = json["ip"] as! String
+                    port = json["port"] as! Int
                     // open socket with ip address and port
                     // print text from socket to screen
                     DispatchQueue.main.async {
@@ -77,38 +74,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         print(data)
     }
-//    @IBAction func SetDefaultLabelText(_ sender: UIButton) {
-//        connectToLesson()
-//    }
     
-//    func connectToLesson(text: String) -> [String: Any]? {
-//
-//        let url = URL(string: "https://www.stackoverflow.com")!
-//
-//        let task = URLSession.shared.dataTask(with: url) {(data, response
-//            guard let data = data else { return }
-//            print(String(data: data, encoding: .utf8)!)
-//        }
-//
-//        task.resume()
-
-        
-//        if let data = text.data(using: .utf8) {
-//            do {
-//                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-//            } catch {
-//                    print(error.localizedDescription)
-//            }
-//        }
-//        return nil
-        
-//    let str = "{\"name\":\"Code\"}"
-//
-//    let dict = convertToDictionary(text: str)
-        
-        
-//    }
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is SecondViewController
+        {
+            let vc = segue.destination as? SecondViewController
+            vc?.ip = ip
+            vc?.port = port
+        }
+    }
 }
 

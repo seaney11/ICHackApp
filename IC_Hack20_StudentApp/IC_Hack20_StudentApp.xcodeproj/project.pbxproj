@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AFA5A4223EFCAA50034F300 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA5A4123EFCAA50034F300 /* SecondViewController.swift */; };
+		7AFA5A7523F017030034F300 /* harmonic_damped.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7AFA5A7423F017030034F300 /* harmonic_damped.gif */; };
+		C823748223EF79E1007CB88D /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C823748123EF79E1007CB88D /* ViewController2.swift */; };
 		C83FBFB623EF072F00168393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FBFB523EF072F00168393 /* AppDelegate.swift */; };
 		C83FBFB823EF072F00168393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FBFB723EF072F00168393 /* ViewController.swift */; };
 		C83FBFBB23EF072F00168393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83FBFB923EF072F00168393 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7AFA5A4123EFCAA50034F300 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7AFA5A7423F017030034F300 /* harmonic_damped.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = harmonic_damped.gif; path = ../../../harmonic_damped.gif; sourceTree = "<group>"; };
+		C823748123EF79E1007CB88D /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		C83FBFB223EF072F00168393 /* IC_Hack20_StudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IC_Hack20_StudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83FBFB523EF072F00168393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C83FBFB723EF072F00168393 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,11 +41,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AFA5A4323EFD9920034F300 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C83FBFA923EF072F00168393 = {
 			isa = PBXGroup;
 			children = (
 				C83FBFB423EF072F00168393 /* IC_Hack20_StudentApp */,
 				C83FBFB323EF072F00168393 /* Products */,
+				7AFA5A4323EFD9920034F300 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +68,15 @@
 		C83FBFB423EF072F00168393 /* IC_Hack20_StudentApp */ = {
 			isa = PBXGroup;
 			children = (
+				7AFA5A7423F017030034F300 /* harmonic_damped.gif */,
 				C83FBFB523EF072F00168393 /* AppDelegate.swift */,
 				C83FBFB723EF072F00168393 /* ViewController.swift */,
 				C83FBFB923EF072F00168393 /* Main.storyboard */,
+				C823748123EF79E1007CB88D /* ViewController2.swift */,
 				C83FBFBC23EF073100168393 /* Assets.xcassets */,
 				C83FBFBE23EF073100168393 /* LaunchScreen.storyboard */,
 				C83FBFC123EF073100168393 /* Info.plist */,
+				7AFA5A4123EFCAA50034F300 /* SecondViewController.swift */,
 			);
 			path = IC_Hack20_StudentApp;
 			sourceTree = "<group>";
@@ -100,7 +117,7 @@
 				};
 			};
 			buildConfigurationList = C83FBFAD23EF072F00168393 /* Build configuration list for PBXProject "IC_Hack20_StudentApp" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -124,6 +141,7 @@
 			files = (
 				C83FBFC023EF073100168393 /* LaunchScreen.storyboard in Resources */,
 				C83FBFBD23EF073100168393 /* Assets.xcassets in Resources */,
+				7AFA5A7523F017030034F300 /* harmonic_damped.gif in Resources */,
 				C83FBFBB23EF072F00168393 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AFA5A4223EFCAA50034F300 /* SecondViewController.swift in Sources */,
 				C83FBFB823EF072F00168393 /* ViewController.swift in Sources */,
 				C83FBFB623EF072F00168393 /* AppDelegate.swift in Sources */,
+				C823748223EF79E1007CB88D /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +303,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S94L7PHASR;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
+				);
 				INFOPLIST_FILE = IC_Hack20_StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "IC-Hack20.IC-Hack20-StudentApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rads.atads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,12 +326,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S94L7PHASR;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
+				);
 				INFOPLIST_FILE = IC_Hack20_StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "IC-Hack20.IC-Hack20-StudentApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rads.atads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

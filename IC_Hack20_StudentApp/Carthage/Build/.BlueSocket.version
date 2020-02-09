@@ -1,0 +1,10 @@
+{
+  "commitish" : "1.0.52",
+  "iOS" : [
+    {
+      "name" : "Socket",
+      "hash" : "a8f374c6e64c2209dffc6d9cc99052da3298810355b77078173feaa2abde23fa",
+      "swiftToolchainVersion" : "5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+    }
+  ]
+}
